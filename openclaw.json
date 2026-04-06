@@ -1,0 +1,59 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "/workspace",
+      "model": {
+        "primary": "deepseek/deepseek-chat"
+      }
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token"
+    },
+    "port": 18789,
+    "bind": "0.0.0.0"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "tools": {
+    "profile": "coding",
+    "web": {
+      "search": {
+        "provider": "tavily",
+        "enabled": true
+      }
+    }
+  },
+  "channels": {
+    "slack": {
+      "enabled": true,
+      "mode": "http",
+      "botToken": "",
+      "signingSecret": "",
+      "webhookPath": "/slack/events",
+      "dmPolicy": "open",
+      "groupPolicy": "open",
+      "channels": {
+        "*": {
+          "requireMention": false
+        }
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "tavily": {
+        "enabled": true
+      },
+      "anthropic": {
+        "enabled": true
+      },
+      "deepseek": {
+        "enabled": true
+      }
+    }
+  }
+}

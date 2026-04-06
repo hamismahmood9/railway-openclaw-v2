@@ -1,0 +1,10 @@
+{
+  "name": "openclaw-gateway",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "openclaw gateway"
+  },
+  "dependencies": {
+    "openclaw": "^2026.4.5"
+  }
+}
